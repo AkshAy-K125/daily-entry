@@ -1,0 +1,7 @@
+.loader {
+    height: -webkit-fill-available;
+    display: flex;
+    width: -webkit-fill-available;
+    align-items: center;
+    justify-content: center;
+}

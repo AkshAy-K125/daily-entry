@@ -1,0 +1,44 @@
+.opsbutton {
+    border-radius: 50%;
+    border: none;
+    width: 56px;
+    text-align: center;
+    vertical-align: middle;
+    color: #202124;
+    background-color: #90caf9;
+    font-size: 30px;
+    height: 56px;
+    margin: 0;
+    padding: 0;
+}
+
+.opsContainer {
+    padding: 1rem;
+    text-align: right;
+    width: -webkit-fill-available;
+    background: rgb(37, 37, 37);
+    display: flex;
+    justify-content: space-between;
+}
+
+.detailsContainer {
+    background: rgb(37, 37, 37);
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+.taskEnum {
+    margin: 1rem 0.5rem;
+    font-size: .6em;
+    line-height: 18px;
+    margin-bottom: -3px;
+}
+
+.taskData {
+    margin: 0.5rem;
+    line-height: 1.5em;
+    word-break: break-word;
+}
