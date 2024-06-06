@@ -8,8 +8,10 @@ const Detailspage = (props) => {
     console.log(props.data.data[props.date])
 
     const homeLoad = () => {
-        window.location.replace("http://192.168.1.184:3000")
+        window.location.replace("https://daily-entry-moo-moo.netlify.app/")
         //Change the relaod to actual site url in production after first deployment
+
+        //https://daily-entry-moo-moo.netlify.app/
 
     }
 
