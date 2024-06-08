@@ -1,0 +1,84 @@
+.add_container {
+    height: 100%;
+}
+
+.save_cancel_cotainer {
+    padding: 1rem;
+    text-align: right;
+    width: -webkit-fill-available;
+    background: rgb(37, 37, 37);
+    color: white;
+    position: sticky;
+    bottom: 0;
+    font-family: Roboto, Arial;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 18px;
+    box-shadow: 0 -1px 10px rgb(0 0 0 / 54%);
+}
+
+.saveButton {
+    color: #90caf9;
+}
+
+.cancelButton {
+    color: white;
+}
+
+
+.save_cancel_cotainer_button {
+    background: rgb(37, 37, 37);
+    font-family: Roboto, Arial;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 18px;
+}
+
+
+.placeholderSpans {
+    font-size: .83rem;
+    font-weight: 400;
+    color: white;
+    font-family: Roboto, Arial;
+    line-height: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.contentContainer {
+    margin: 1.75rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.formEntry {
+    margin: 30px;
+}
+
+input {
+    background: transparent;
+    border: 1px solid #bdc1c6;
+    color: white;
+    min-height: 2.15em;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: .9rem;
+}
+
+.errorMessage {
+    padding: 0;
+    color: #FC9991;
+    margin: 1rem;
+}
+
+.loader {
+    height: -webkit-fill-available;
+    display: flex;
+    width: -webkit-fill-available;
+    align-items: center;
+    justify-content: center;
+}

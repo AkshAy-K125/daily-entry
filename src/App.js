@@ -4,6 +4,7 @@ import { DNA } from 'react-loader-spinner'
 import './App.css'
 
 
+
 const App = () => {
   const [allData, setAllData] = useState(null)
 
@@ -12,13 +13,16 @@ const App = () => {
 
     const requestOptions = {
       method: "POST",
+
       body: raw,
       redirect: "follow"
     };
 
-    const response = await fetch("https://script.google.com/macros/s/AKfycbxwQS5ttQNi6unpIHb8pZBAJTpPC5okkR55r9HPE06DOtdOzay3MQiBaD6SYwXJMiUe/exec?funcName=dataFetch", requestOptions)
+    const response = await fetch("https://script.google.com/macros/s/AKfycby0MqdPc3BVON4sWfMprc4ttrbamd0xkRHvwR3cCLUirjDnhv19ErV6qF2k_FZ5mz46Pw/exec?funcName=1", requestOptions)
     const result = await response.json();
+
     setAllData(result)
+
   }
 
   useEffect(() => {

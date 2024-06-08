@@ -1,27 +1,27 @@
 import { useState } from 'react'
 import './viewpage.css'
-import { Detailspage } from './../../components'
+import { Detailspage, Addpage } from './../../components'
 
 
 
 const ViewPage = (data) => {
-    const [isRendered, setisRendered] = useState(false)
+    const [dateclicked, setdateclicked] = useState(null)
+    const [addClicked, setaddClicked] = useState(false)
 
     const clickHadler_viewDetails = (date) => {
-
-        console.log(date["key"])
-        setisRendered(date["key"])
+        setdateclicked(date["key"])
     }
 
-    const renderComponent = () => {
-        return <Detailspage data={data} date={isRendered} />
+    const clickHadler_addDetails = () => {
+        setdateclicked(null)
+        setaddClicked(true)
     }
 
     return (
         <>
 
             {
-                !isRendered && (
+                (dateclicked === null && !addClicked) && (
                     <div className='viewContainer'>
                         {Object.keys(data.data).map((key) => (
                             <button onClick={() => clickHadler_viewDetails({ key })} className='viewPage_button' key={key}>
@@ -29,14 +29,15 @@ const ViewPage = (data) => {
                             </button>
                         ))}
                         <div className='addbutton_navigator'>
-                            <button className='addbutton'>
+                            <button onClick={() => clickHadler_addDetails()} className='addbutton'>
                                 +
                             </button>
                         </div>
                     </div>
                 )
             }
-            {isRendered && renderComponent()}
+            {(dateclicked && !addClicked) && <Detailspage data={data} date={dateclicked} />}
+            {(!dateclicked && addClicked) && <Addpage data={data} />}
         </>
     );
 }
