@@ -2,22 +2,28 @@
 import './detailsPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faHome } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
+import { EditPage } from './../../components'
 
 const Detailspage = (props) => {
-    console.log(props.data.data)
-    console.log(props.data.data[props.date])
+
+    const [editClicked, seteditClicked] = useState(false)
 
     const homeLoad = () => {
-        window.location.replace("http://192.168.1.184:3000")
+        // window.location.replace("http://192.168.1.184:3000")
         //Change the relaod to actual site url in production after first deployment
 
-        // window.location.replace("https://daily-entry-moo-moo.netlify.app/")
-
-        //https://daily-entry-moo-moo.netlify.app/
+        window.location.replace("https://daily-entry-moo-moo.netlify.app/")
 
     }
 
-    return (
+    const handleEditClicked = () => {
+        seteditClicked(true)
+    }
+
+    return (<>{editClicked ?
+        <EditPage data={props.data.data[props.date]} date={props.date} />
+        :
         <div className='detailsContainer'>
             <div>
                 <h1>
@@ -42,11 +48,13 @@ const Detailspage = (props) => {
                 <button onClick={homeLoad} className='opsbutton'>
                     <FontAwesomeIcon icon={faHome} />
                 </button>
-                <button className='opsbutton'>
+                <button onClick={handleEditClicked} className='opsbutton'>
                     <FontAwesomeIcon icon={faEdit} />
                 </button>
             </div>
         </div>
+    }
+    </>
     )
 }
 

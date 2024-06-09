@@ -9,12 +9,10 @@ const Addpage = ({ data }) => {
     const [saveClicked, setsaveClicked] = useState(false)
 
     const homeLoad = () => {
-        window.location.replace("http://192.168.1.184:3000")
+        // window.location.replace("http://192.168.1.184:3000")
         //Change the relaod to actual site url in production after first deployment
 
-        // window.location.replace("https://daily-entry-moo-moo.netlify.app/")
-
-        //https://daily-entry-moo-moo.netlify.app/
+        window.location.replace("https://daily-entry-moo-moo.netlify.app/")
 
     }
 
@@ -28,7 +26,7 @@ const Addpage = ({ data }) => {
             redirect: "follow"
         };
 
-        const response = await fetch("https://script.google.com/macros/s/AKfycby0MqdPc3BVON4sWfMprc4ttrbamd0xkRHvwR3cCLUirjDnhv19ErV6qF2k_FZ5mz46Pw/exec?funcName=2&data=" + dataArray, requestOptions)
+        const response = await fetch("https://script.google.com/macros/s/AKfycby0MqdPc3BVON4sWfMprc4ttrbamd0xkRHvwR3cCLUirjDnhv19ErV6qF2k_FZ5mz46Pw/exec?funcName=2&data=" + encodeURIComponent(dataArray), requestOptions)
         console.log(response)
         homeLoad()
     }
