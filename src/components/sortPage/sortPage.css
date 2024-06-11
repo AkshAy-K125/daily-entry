@@ -1,0 +1,69 @@
+.sort_container {
+    height: 100%;
+}
+
+.save_cancel_container {
+    padding: 1rem;
+    text-align: right;
+    width: -webkit-fill-available;
+    background: rgb(37, 37, 37);
+    color: white;
+    position: sticky;
+    bottom: 0;
+    font-family: Roboto, Arial;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 18px;
+    box-shadow: 0 -1px 10px rgb(0 0 0 / 54%);
+}
+
+.saveButton {
+    color: #90caf9;
+}
+
+.cancelButton {
+    color: white;
+}
+
+.save_cancel_container_button {
+    background: rgb(37, 37, 37);
+    font-family: Roboto, Arial;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 18px;
+}
+
+.list {
+    user-select: none;
+}
+
+.item {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(84, 84, 241);
+    color: white;
+    margin: 8px;
+    height: 60px;
+    cursor: grab;
+}
+
+.dragged {
+    background-color: rgb(37, 37, 197);
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .list {
+        grid-gap: 24px;
+    }
+}

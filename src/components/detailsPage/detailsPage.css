@@ -13,6 +13,8 @@
 }
 
 .opsContainer {
+    bottom: 0;
+    position: sticky;
     padding: 1rem;
     text-align: right;
     width: -webkit-fill-available;
